@@ -5,7 +5,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN npm install
+RUN npm run ng build -- --prod --output-path=dist --base-href /v2/tools/mongodb-ui/
 
 # HEALTHCHECK --interval=10s CMD curl --fail http://localhost:4321 || exit 1
 
